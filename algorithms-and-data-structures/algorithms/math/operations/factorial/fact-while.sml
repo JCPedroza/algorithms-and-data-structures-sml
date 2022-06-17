@@ -11,5 +11,5 @@ fun fact x =
 
 val subject = {
   algorithm = fact,
-  id = "while loop"
+  id = "imperative while loop"
 }

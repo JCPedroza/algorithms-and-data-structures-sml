@@ -6,5 +6,5 @@ fun fact x =
 
 val subject = {
   algorithm = fact,
-  id = "if then else"
+  id = "if expression"
 }

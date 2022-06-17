@@ -10,5 +10,5 @@ fun fact x =
 
 val subject = {
   algorithm = fact,
-  id = "tail case of"
+  id = "tail recursion, case of expression"
 }

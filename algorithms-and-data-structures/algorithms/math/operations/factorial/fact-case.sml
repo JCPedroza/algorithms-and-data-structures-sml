@@ -5,5 +5,5 @@ fun fact x = case x of
 
 val subject = {
   algorithm = fact,
-  id = "tail case"
+  id = "case of expression"
 }

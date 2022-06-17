@@ -9,5 +9,5 @@ fun fact x =
 
 val subject = {
   algorithm = fact,
-  id = "tail function pattern matching"
+  id = "tail recursion, function pattern matching"
 }
