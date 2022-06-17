@@ -36,6 +36,11 @@ poly -q --use <test-file>.sml
 
 ## Resources
 
+- [Standard ML Family GitHub Project][100]
+- [Programming Languages Part A at Coursera (functional programming taught in SML)][101]
+- [SML at Wikipedia][102]
+- [ML at Wikipedia][103]
+
 [30]: http://mlton.org/
 [31]: https://www.polyml.org/
 [32]: https://www.smlnj.org/
@@ -43,3 +48,8 @@ poly -q --use <test-file>.sml
 
 [50]: https://thebreakfastpost.com/2016/06/11/naming-conventions-in-standard-ml/
 [51]: https://www.cs.cornell.edu/courses/cs312/2008sp/handouts/style.htm
+
+[100]: https://smlfamily.github.io/
+[101]: https://www.coursera.org/learn/programming-languages
+[102]: https://en.wikipedia.org/wiki/SML
+[103]: https://en.wikipedia.org/wiki/ML_(programming_language)
