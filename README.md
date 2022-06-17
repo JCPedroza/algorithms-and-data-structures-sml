@@ -14,7 +14,7 @@ The purpose of this repository is for us to practice:
 
 ## SML Implementations
 
-- [Poly/ML][30]
+- [Poly/ML][30] <- Runs un Raspberry PI!
 - [MLton][31]
 - [SML/NJ][32]
 - [Moscow ML][33]
@@ -36,6 +36,7 @@ poly -q --use <test-file>.sml
 
 ## Resources
 
+- [SML Help][104]
 - [Standard ML Family GitHub Project][100]
 - [Programming Languages Part A at Coursera (functional programming taught in SML)][101]
 - [SML at Wikipedia][102]
@@ -53,3 +54,4 @@ poly -q --use <test-file>.sml
 [101]: https://www.coursera.org/learn/programming-languages
 [102]: https://en.wikipedia.org/wiki/SML
 [103]: https://en.wikipedia.org/wiki/ML_(programming_language)
+[104]: https://smlhelp.github.io
