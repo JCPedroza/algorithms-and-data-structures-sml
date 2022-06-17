@@ -9,8 +9,10 @@ The purpose of this repository is for us to practice:
 - Algorithms
 - Data structures
 - Unit testing
+- Test-driven development
 - Version control
 - Code collaboration
+- Continuous integration (coming soon)
 
 ## SML Implementations
 
