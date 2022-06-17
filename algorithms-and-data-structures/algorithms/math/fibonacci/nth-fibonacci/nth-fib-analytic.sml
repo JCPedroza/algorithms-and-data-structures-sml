@@ -11,8 +11,7 @@ fun fib n =
     Real.trunc((pToTheM + qToTheM) / sqrt5)
   end
 
-val tests =
-  fib 0 = 0 andalso
-  fib 1 = 1 andalso
-  fib 6 = 8 andalso
-  fib 30 = 832040
+val subject = {
+  algorithm = fib,
+  id = "analytic"
+}
