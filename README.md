@@ -19,7 +19,7 @@ The purpose of this repository is for us to practice:
 
 ## SML Implementations
 
-- [Poly/ML][30] <- Runs in Raspberry Pi!
+- [Poly/ML][30] <- Runs on Raspberry Pi!
 - [SML/NJ][32]
 - [MLton][31]
 - [Moscow ML][33]
@@ -62,6 +62,8 @@ Code reviews, pull requests, issues, and discussions are always welcome!
 - [SML Help][104]
 - [Standard ML Family GitHub Project][100]
 - [Programming Languages Part A at Coursera (functional programming taught in SML)][101]
+- [Elements of ML Programming free online book][108]
+- [ML for the Working Programmer free online book][109]
 - [SML at Reddit][105]
 - [Programming at Reddit][106]
 - [Functional Programming at Reddit][107]
@@ -110,6 +112,8 @@ Code reviews, pull requests, issues, and discussions are always welcome!
 [105]: https://www.reddit.com/r/sml/
 [106]: https://www.reddit.com/r/programming/
 [107]: https://www.reddit.com/r/functionalprogramming/
+[108]: http://infolab.stanford.edu/~ullman/emlp.html
+[109]: https://www.cl.cam.ac.uk/~lp15/MLbook/pub-details.html
 
 [120]: https://img.shields.io/github/contributors/JCPedroza/algorithms-and-data-structures-sml
 [121]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/graphs/contributors
