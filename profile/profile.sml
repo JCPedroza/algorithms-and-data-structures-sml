@@ -45,8 +45,7 @@ fun timeOneRun f xs id inAsStr : profile =
       rounds = 1,
       cpuTimes = cpuTime,
       realTime = realTime
-  }
-  end
+  } end
 
 (* Time many function runs. *)
 fun timeManyRuns f xs rounds id inAsStr : profile =
@@ -64,5 +63,4 @@ fun timeManyRuns f xs rounds id inAsStr : profile =
     rounds = rounds,
     cpuTimes = cpuTime,
     realTime = realTime
-  }
-  end
+  } end
