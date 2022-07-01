@@ -1,4 +1,4 @@
-use "../../../../../test/test-utils.sml";
+use "../../../../../utest/utest.sml";
 
 use "nth-fib-analytic.sml"; val subjects = [subject];
 use "nth-fib-case-tail.sml"; val subjects = subject :: subjects;
@@ -6,6 +6,7 @@ use "nth-fib-case.sml"; val subjects = subject :: subjects;
 use "nth-fib-fun-tail.sml"; val subjects = subject :: subjects;
 use "nth-fib-fun.sml"; val subjects = subject :: subjects;
 use "nth-fib-if.sml"; val subjects = subject :: subjects;
+use "nth-fib-memo.sml"; val subjects = subject :: subjects;
 
 fun testFib f =
   f 0 = 0 andalso
