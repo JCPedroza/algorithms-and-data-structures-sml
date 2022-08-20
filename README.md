@@ -4,19 +4,6 @@
 
 Algorithms and data structures implemented in Standard ML.
 
-The purpose of this repository is for us to practice:
-
-- Standard ML in general
-- Functional and functional-first programming
-- Algorithms
-- Data structures
-- Unit testing
-- Test-driven development
-- Version control
-- Code collaboration
-- Function profiling
-- Continuous integration
-
 ## SML Implementations
 
 - [Poly/ML][30] <- Runs on Raspberry Pi!
@@ -25,7 +12,7 @@ The purpose of this repository is for us to practice:
 - [Moscow ML][33]
 - [MLKit][34]
 
-## Online SML REPLs, compilers, etc
+## Online SML
 
 - [SOSML][40]
 - [SML IDE (MLKit)][41]
@@ -36,9 +23,7 @@ The purpose of this repository is for us to practice:
 - [Naming conventions][50]
 - [Style guide][51]
 
-## Unit Tests
-
-### Poly/ML
+## Usage
 
 Inside the test file's directory:
 
