@@ -114,6 +114,6 @@ Code reviews, pull requests, issues, and discussions are always welcome!
 [131]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/pulls
 
 [150]: https://github.com/jcpedroza/algorithms-and-data-structures
-[151]: https://github.com/jcpedroza/algorithms-and-data-structures-ocaml
+[151]: https://github.com/jcpedroza/algorithms-and-data-structures-ml
 [152]: https://github.com/jcpedroza/algorithms-and-data-structures-hs
 [153]: https://github.com/jcpedroza/algorithms-and-data-structures-py
