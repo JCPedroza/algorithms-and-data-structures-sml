@@ -5,10 +5,12 @@ signature ASSERT = sig
   val intList : string -> int list -> int list -> unit
 end
 
-structure Assert = struct
+structure Assert :> ASSERT = struct
   structure Utils = struct
     fun intListToStr intList =
       String.concatWith ", " (map Int.toString intList)
+
+    fun strToStr str = "'" ^ str ^ "'"
   end
 
   fun printRaise msg =
@@ -19,24 +21,21 @@ structure Assert = struct
     "\nExpected: " ^ "f(" ^ arg ^ ") = " ^ exp ^
     "\nActual: " ^ act
 
-  val strMsg = errMsg
+  fun makeTypeMsg toString = fn arg => fn act => fn exp =>
+    errMsg arg (toString act) (toString exp)
 
-  fun intMsg arg act exp =
-    errMsg arg (Int.toString act) (Int.toString exp)
+  val boolMsg = makeTypeMsg Bool.toString
+  val intMsg = makeTypeMsg Int.toString
+  val intListMsg = makeTypeMsg Utils.intListToStr
+  val strMsg = makeTypeMsg Utils.strToStr
 
-  fun boolMsg arg act exp =
-    errMsg arg (Bool.toString act) (Bool.toString exp)
-
-  fun intListMsg arg act exp =
-    errMsg arg (Utils.intListToStr act) (Utils.intListToStr exp)
-
-  fun buildAsserter typeMsg = fn arg => fn act => fn exp =>
+  fun makeAssert typeMsg = fn arg => fn act => fn exp =>
     if act = exp
     then ()
     else printRaise (typeMsg arg act exp)
 
-  val str = buildAsserter strMsg
-  val int = buildAsserter intMsg
-  val bool =  buildAsserter boolMsg
-  val intList = buildAsserter intListMsg
+  val bool =  makeAssert boolMsg
+  val int = makeAssert intMsg
+  val intList = makeAssert intListMsg
+  val str = makeAssert strMsg
 end
