@@ -1,5 +1,4 @@
 signature ASSERT = sig
-  exception AssertionError
   val int : string -> int -> int -> unit
   val str : string -> string -> string -> unit
   val bool : string -> bool -> bool -> unit
@@ -7,17 +6,16 @@ signature ASSERT = sig
 end
 
 structure Assert = struct
-  exception AssertionError
-
   structure Utils = struct
     fun intListToStr intList =
       String.concatWith ", " (map Int.toString intList)
   end
 
-  fun printRaise msg = (print (msg ^ "\n"); raise AssertionError)
+  fun printRaise msg =
+    (print (msg ^ "\n"); raise Fail "Equals Error")
 
   fun errMsg arg act exp =
-    "\nAssertion Error!" ^
+    "\nAssertion Error:" ^
     "\nExpected: " ^ "f(" ^ arg ^ ") = " ^ exp ^
     "\nActual: " ^ act
 
