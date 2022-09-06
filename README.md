@@ -25,12 +25,46 @@ Algorithms and data structures implemented in Standard ML.
 
 ## Usage
 
-### Unit Tests
+Before running a script, you might need to set its executable permission. In
+linux you can use `chmod`:
 
-You can run any test file with
+```bash
+chmod +x <path-to-script>
+```
+
+### PolyML
+
+Visit the [PolyML GitHub repository][31] for information about how to
+install PolyML in your system.
+
+Here are some options:
+
+```bash
+apt install polyml  # Debian / Ubuntu
+brew install polyml # OS X and brew
+```
+
+#### Running Files
+
+You can run specific sml files, including test files, from the file's
+directory, with:
 
 ```bash
 poly --script <file-name>.sml
+```
+
+#### Running All Unit Tests
+
+To run all unit tests, you can use the bash script:
+
+```bash
+./scripts/bash/test-poly.sh
+```
+
+Or you can use this command in unixy systems:
+
+```bash
+find . -name "*.spec.sml" -execdir poly --script \{\} +;
 ```
 
 ## Contributing
@@ -44,7 +78,20 @@ poly --script <file-name>.sml
 
 Code reviews, pull requests, issues, and discussions are always welcome!
 
-## Resources
+This project is intended to be a safe, welcoming space for collaboration.
+Everyone interacting in this project's codebases, issue trackers, chat rooms
+and mailing lists is expected to follow the [code of conduct][35].
+
+You can see the full contribution guidelines, workflows, and examples in the
+`CONTRIBUTING.md` document of this repository, or [here online][36].
+
+## License
+
+This repository is available as open source under the terms of the
+[MIT License][2], that you can see in the LICENSE.md document of
+this repository.
+
+## General SML Resources
 
 - [SML Help][104]
 - [Standard ML Family GitHub Project][100]
@@ -57,7 +104,7 @@ Code reviews, pull requests, issues, and discussions are always welcome!
 - [SML at Wikipedia][102]
 - [ML at Wikipedia][103]
 
-## Algorithms & Data Structures in Other Languages
+## Similar Resources
 
 - [OCaml][151]
 - [Haskell][152]
@@ -76,6 +123,8 @@ Code reviews, pull requests, issues, and discussions are always welcome!
 [32]: https://www.smlnj.org/
 [33]: https://github.com/kfl/mosml
 [34]: https://github.com/melsman/mlkit
+[35]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/blob/main/CODE_OF_CONDUCT.md
+[36]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/blob/main/CONTRIBUTING.md
 
 [40]: https://sosml.org/
 [41]: https://diku-dk.github.io/sml-ide/
