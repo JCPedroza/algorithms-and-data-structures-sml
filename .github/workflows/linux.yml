@@ -1,0 +1,27 @@
+# SML Workflow
+
+name: linux build & test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install polyml (sml implementation)
+      run: |
+        sudo apt-get install polyml
+
+    - name: Run test (spec) files
+      run: |
+        find . -name "*.spec.sml" -execdir poly --script \{\} +;
