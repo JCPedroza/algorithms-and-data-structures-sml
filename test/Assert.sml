@@ -7,8 +7,11 @@ end
 
 structure Assert :> ASSERT = struct
   structure Utils = struct
-    fun intListToStr intList =
+    fun rawIntListToStr intList =
       String.concatWith ", " (map Int.toString intList)
+
+    fun intListToStr intList =
+      "[" ^ rawIntListToStr intList ^ "]"
 
     fun strToStr str = "'" ^ str ^ "'"
   end
@@ -16,13 +19,13 @@ structure Assert :> ASSERT = struct
   fun printRaise msg =
     (print (msg ^ "\n"); raise Fail "Equals Error")
 
-  fun errMsg arg act exp =
-    "\nAssertion Error:" ^
+  fun eqErrMsg arg act exp =
+    "\nEquals Error:" ^
     "\nExpected: " ^ "f(" ^ arg ^ ") = " ^ exp ^
     "\nActual: " ^ act
 
   fun makeTypeMsg toString = fn arg => fn act => fn exp =>
-    errMsg arg (toString act) (toString exp)
+    eqErrMsg arg (toString act) (toString exp)
 
   val boolMsg = makeTypeMsg Bool.toString
   val intMsg = makeTypeMsg Int.toString
@@ -34,6 +37,7 @@ structure Assert :> ASSERT = struct
     then ()
     else printRaise (typeMsg arg act exp)
 
+  (* All asserts are string -> 'a -> 'a -> unit *)
   val bool =  makeAssert boolMsg
   val int = makeAssert intMsg
   val intList = makeAssert intListMsg
