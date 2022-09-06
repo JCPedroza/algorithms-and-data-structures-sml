@@ -25,10 +25,12 @@ Algorithms and data structures implemented in Standard ML.
 
 ## Usage
 
-Inside the test file's directory:
+### Unit Tests
+
+You can run any test file with
 
 ```bash
-poly -q --use <test-file>.sml
+poly --script <file-name>.sml
 ```
 
 ## Contributing
