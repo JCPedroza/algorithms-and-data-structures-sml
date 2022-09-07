@@ -1,7 +1,7 @@
 (**
  * Compute sum of two numbers, where the numbers' digits are represented as
  * non-negative integers in a list.
- * Uses a functional approach with simple recursion.
+ * Uses a functional approach with simple recursion and an if expression.
  * Complexity: time O(n), space O(n).
  * Type: int list -> int list -> int list.
  *)
@@ -26,5 +26,5 @@ fun addListnums listnumA listnumB =
 
 val solution = {
   function = addListnums,
-  id = "simple recursion"
+  id = "simple recursion and if expression"
 }

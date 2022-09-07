@@ -1,6 +1,6 @@
 use "../../../test/Assert.sml";
 use "../../../test/Test.sml";
-use "add-two-nums.repo.sml";
+use "add-two.repo.sml";
 open Test;
 
 describeAll solutions (fn {function, id} => (
@@ -19,6 +19,11 @@ describeAll solutions (fn {function, id} => (
       Assert.intList
         "[9, 9] [9, 9, 9, 9]"
         (function [9, 9] [9, 9, 9, 9])
+        [8, 9, 0, 0, 1];
+
+      Assert.intList
+        "[9, 9, 9, 9] [9, 9]"
+        (function [9, 9, 9, 9] [9, 9])
         [8, 9, 0, 0, 1]
     ))
   ))
