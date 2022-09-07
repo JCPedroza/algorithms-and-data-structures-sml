@@ -12,13 +12,13 @@ fun addListnums listnumA listnumB =
       then []
       else
         let
-          val vala = if null listA then 0 else hd listA
-          val valb = if null listB then 0 else hd listB
-          val tla = if null listA then [] else tl listA
-          val tlb = if null listB then [] else tl listB
-          val sum = vala + valb + carry
+          val numA = if null listA then 0 else hd listA
+          val numB = if null listB then 0 else hd listB
+          val nxtA = if null listA then [] else tl listA
+          val nxtB = if null listB then [] else tl listB
+          val sum = numA + numB + carry
         in
-          sum mod 10 :: loop (sum div 10) tla tlb
+          sum mod 10 :: loop (sum div 10) nxtA nxtB
         end
   in
     loop 0 listnumA listnumB
