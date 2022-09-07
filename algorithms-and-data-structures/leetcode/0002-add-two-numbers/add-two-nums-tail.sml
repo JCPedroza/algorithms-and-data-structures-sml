@@ -18,7 +18,7 @@ fun addListnums listnumA listnumB =
           val nxtB = if null listB then [] else tl listB
           val sum = numA + numB + carry
         in
-          loop (sum div 10) ((sum mod 11) :: result) nxtA nxtB
+          loop (sum div 10) ((sum mod 10) :: result) nxtA nxtB
         end
   in
     loop 0 [] listnumA listnumB
