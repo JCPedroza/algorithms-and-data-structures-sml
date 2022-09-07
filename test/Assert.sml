@@ -16,13 +16,10 @@ structure Assert :> ASSERT = struct
     fun strToStr str = "'" ^ str ^ "'"
   end
 
-  fun printRaise msg =
-    (print (msg ^ "\n"); raise Fail "Equals Error")
-
   fun eqErrMsg arg act exp =
-    "\nEquals Error:" ^
-    "\nExpected: " ^ "f(" ^ arg ^ ") = " ^ exp ^
-    "\nActual: " ^ act
+    "\n    Equals Error:" ^
+    "\n    Expected: " ^ "f(" ^ arg ^ ") = " ^ exp ^
+    "\n    Actual: " ^ act ^ "\n"
 
   fun makeTypeMsg toString = fn arg => fn act => fn exp =>
     eqErrMsg arg (toString act) (toString exp)
@@ -35,7 +32,7 @@ structure Assert :> ASSERT = struct
   fun makeAssert typeMsg = fn arg => fn act => fn exp =>
     if act = exp
     then ()
-    else printRaise (typeMsg arg act exp)
+    else raise Fail (typeMsg arg act exp)
 
   (* All asserts are string -> 'a -> 'a -> unit *)
   val bool =  makeAssert boolMsg

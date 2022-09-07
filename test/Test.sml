@@ -11,20 +11,15 @@ end
  * function is evaluated in search for Fail exceptions.
  *)
 structure Test :> TEST = struct
-
   (** Print [msg] and rails a Fail exception with [fail]. *)
-  fun printRaise msg fail =
-    (print (msg ^ "\n"); raise Fail fail)
+  fun printRaise msg =
+    (print (msg ^ "\n"); raise Fail "Test Error")
 
   (** Error message used for test groups. *)
-  fun itErrMsg id fail =
-    "\n  Test Error:" ^
-    "\n  '" ^ id ^ "' encountered " ^ fail
+  fun itIdLog id = "\n  " ^ id
 
   (** Error message used for test suites. *)
-  fun descErrMsg id fail =
-    "\n    Suite Error:" ^
-    "\n    '" ^ id ^ "' encountered " ^ fail ^ "\n"
+  fun descIdLog id = "\n" ^ id
 
   (**
    * Test suite for multiple functions that share the same test cases. The
@@ -48,7 +43,7 @@ structure Test :> TEST = struct
   fun describeOne idGen idSpec body =
     body ()
     handle Fail fail =>
-      printRaise (descErrMsg (idGen ^ " <" ^ idSpec ^ ">") fail) "Suite Error"
+      printRaise ((descIdLog (idGen ^ " <" ^ idSpec ^ ">")) ^ fail)
 
   (**
    * Test suite that holds groups of tests or other test suites.
@@ -58,8 +53,7 @@ structure Test :> TEST = struct
    *)
   fun describe id body =
     body ()
-    handle Fail fail =>
-      printRaise (descErrMsg id fail) "Suite Error"
+    handle Fail fail => printRaise ((descIdLog id) ^ fail)
 
   (**
    * Group tests together, describing a specific behavior.
@@ -69,8 +63,7 @@ structure Test :> TEST = struct
    *)
   fun it id body =
     body ()
-    handle Fail fail =>
-      printRaise (itErrMsg id fail) "Test Error"
+    handle Fail fail => raise Fail ((itIdLog id) ^ fail)
 
   (** Alias for the [it] function. *)
   val test = it
