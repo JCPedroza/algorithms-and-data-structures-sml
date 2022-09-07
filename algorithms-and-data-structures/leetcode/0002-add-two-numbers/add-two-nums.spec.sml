@@ -5,7 +5,7 @@ open Test;
 
 describeAll solutions (fn {function, id} => (
   describeOne "Leet 2 solution" id (fn () => (
-    it "Sums numbers represented as lists" (fn () => (
+    it "sums numbers represented as lists" (fn () => (
       Assert.intList
         "[0] [0]"
         (function [0] [0])
