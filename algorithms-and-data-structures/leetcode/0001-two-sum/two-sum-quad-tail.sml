@@ -1,6 +1,6 @@
 (**
- * Finds two numbers in [nums] that add up to [target], and returns their
- * indexes as a tuple. Returns (~1, ~1) if no solution is found.
+ * Finds two different items in [nums] that add up to [target], and returns
+ * their indexes as a tuple. Returns (~1, ~1) if no solution is found.
  * Uses a functional approach with tail call recursion.
  * Complexity: time AO(n²) BO(1) WO(n²), space AO(1) TO(n).
  * int -> int list -> int * int
@@ -12,7 +12,7 @@ fun twoSum target nums =
           ([], []) => (~1, ~1) (* No solution found *)
 
         | ([], nt :: nts) => (* Reached end of list, start next iteration *)
-          loop (idxHead + 1) (idxHead + 2) nt nts nts
+            loop (idxHead + 1) (idxHead + 2) nt nts nts
 
         | (t :: ts, _) =>
             if head + t = target
@@ -24,5 +24,5 @@ fun twoSum target nums =
 
 val solution = {
   function = twoSum,
-  id = "tail call recursion"
+  id = "cuadratic tail call recursion"
 }
