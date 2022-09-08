@@ -9,7 +9,7 @@ Assume the two numbers do not contain any leading zero, except the
 number 0 itself.
 
 If one of the lists is empty, return the other one. This means that when both
-lists are empty, an empty the sum must evaluate to an empty list.
+lists are empty, the sum must evaluate to an empty list.
 
 Use SML's native lists. They already are linked lists.
 
