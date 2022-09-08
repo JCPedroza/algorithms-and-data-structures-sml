@@ -32,7 +32,7 @@ out: (~1, ~1)
 ## Constraints
 
 ```text
-0 <= length of nums list <= 104
+0 <= length of nums list <= 100
 -100 <= number value <= 100
 -100 <= target value <= 100
 There's either one solution or no solution.
