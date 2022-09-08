@@ -1,6 +1,7 @@
 # SML Algorithms and Data Structures
 
-[![license MIT][1]][2]
+[![license MIT][0]][1]
+[![linux build & tests][2]][3]
 
 Algorithms and data structures implemented in Standard ML.
 
@@ -115,8 +116,10 @@ this repository.
 
 [![total lines][70]][71] [![code size][72]][73] [![repo size][74]][75]
 
-[1]: https://img.shields.io/github/license/jcpedroza/algorithms-and-data-structures-sml
-[2]: https://en.wikipedia.org/wiki/MIT_License
+[0]: https://badgen.net/github/license/JCPedroza/algorithms-and-data-structures-ts
+[1]: https://en.wikipedia.org/wiki/MIT_License
+[2]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/actions/workflows/linux.yml/badge.svg
+[3]: https://github.com/JCPedroza/algorithms-and-data-structures-sml/actions/workflows/linux.yml
 
 [30]: https://github.com/MLton/mlton
 [31]: https://github.com/polyml/polyml
